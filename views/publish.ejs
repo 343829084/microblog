@@ -1,0 +1,42 @@
+<div class="hero-unit">
+    <h1>欢迎来到 Microblog</h1>
+    <p>Microblog 是一个基于 Node.js 的微博系统。</p>
+    <p>
+        <a class="btn btn-primary btn-large" href="/login">登录</a>
+        <a class="btn btn-large" href="/reg">立即注册</a>
+    </p>
+</div>
+
+<ul>
+  <div id="tableTitle">
+      <div>项目名称</div>
+      <div id="ivlist_ivt2">借款金额↓</div>
+      <div id="ivlist_ivt3">借款期限↓</div>
+      <div id="ivlist_ivt4">年化收益率↓</div>
+      <div id="ivlist_ivt5">进度↓</div>
+      <div>还款方式</div>
+      <div>发布日期</div>
+      <div>操作</div>
+      <div></div>
+  </div>
+
+  <% if (publishs) {
+   publishs.forEach(function(post, index) { %>
+  <li>
+    <div class="span4"><%= post.vistorInfo.name %></div>
+    <div class="span4"><%- post.vistorInfo.money %></div>
+    <div class="span4"><%- post.vistorInfo.deadline %></div>
+    <div class="span4"><%- post.vistorInfo.annual_yield %></div>
+    <div class="span4"><%- post.vistorInfo.process %></div>
+    <div class="span4"><%- post.vistorInfo.replay_way %></div>
+    <div class="span4"><%- post.vistorInfo.date %></div>
+    <div class="span4"><% if (post.vistorInfo.status == 0) { %>
+      <a class="btn btn-primary btn-large">投资</a>
+    <% } else { %>
+      <a class="btn btn-large">还款中</a>
+    <% }%></div>
+  </li>
+<%}) %>
+<% } %>
+
+</ul>
