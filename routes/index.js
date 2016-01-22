@@ -12,6 +12,7 @@ exports.index = function(req, res){
 
   var page = req.query.page?req.query.page:1;
   var pagesize = 9;
+  // 下面这一块，是正真microblog的代码，只是为了执行publish这个测试，暂时屏掉了。
   /*
   Post.getUserTotal('', function(err, count){
     if (err) {
@@ -32,6 +33,7 @@ exports.index = function(req, res){
       });
   });
 */
+// 下面这个是自己用来做测试用的
   Publish.Get('', function(err, publishs) {
     if (err) {
       return res.redirect('/');

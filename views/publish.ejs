@@ -23,7 +23,7 @@
   <% if (publishs) {
    publishs.forEach(function(post, index) { %>
   <li>
-    <div class="span4"><%= post.vistorInfo.name %></div>
+    <div class="span4"><%- post.vistorInfo.name %></div>
     <div class="span4"><%- post.vistorInfo.money %></div>
     <div class="span4"><%- post.vistorInfo.deadline %></div>
     <div class="span4"><%- post.vistorInfo.annual_yield %></div>
