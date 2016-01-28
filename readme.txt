@@ -1,1 +1,2 @@
-this is an example for node.js+express+mongodb+ejs!
+1:express microblog
+2: npm start启动程序
